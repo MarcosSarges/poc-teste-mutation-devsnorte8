@@ -13,4 +13,9 @@ describe("Unidade::Entidade::Pessoa", () => {
     const pessoa = new Pessoa(mockMenorIdade);
     expect(pessoa.eMaiorDeIdade()).toBeFalsy();
   });
+
+  it("deve retornar que a pessoa é maior de idade", () => {
+    const pessoa = new Pessoa({ idade: 18 });
+    expect(pessoa.eMaiorDeIdade()).toBeTruthy();
+  });
 });
